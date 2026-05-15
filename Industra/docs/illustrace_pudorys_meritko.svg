@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1040" viewBox="0 0 1400 1040">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+    <style>
+      .room { fill:#f8fafc; stroke:#334155; stroke-width:3; }
+      .obj { stroke:#0f172a; stroke-width:1.5; }
+      .desk { fill:#cfd8e3; stroke:#64748b; }
+      .top { fill:#2563eb; stroke:#1e3a8a; }
+      .sub { fill:#111827; stroke:#000; }
+      .bar { fill:#cbd5e1; stroke:#94a3b8; }
+      .door { fill:#e2e8f0; stroke:#94a3b8; }
+      .dim { stroke:#64748b; stroke-width:2; marker-start:url(#arrow); marker-end:url(#arrow); }
+      .aux { stroke:#94a3b8; stroke-width:1.4; stroke-dasharray:6 5; }
+      .txt { font: 18px 'Segoe UI', sans-serif; fill:#0f172a; }
+      .small { font: 14px 'Segoe UI', sans-serif; fill:#334155; }
+      .title { font: 26px 'Segoe UI Semibold', sans-serif; fill:#0f172a; }
+      .m1 { fill:#dc2626; }
+    </style>
+  </defs>
+
+  <!-- Scale: 1 m = 60 px -->
+  <text x="48" y="44" class="title">Technický půdorys v měřítku (1 m = 60 px)</text>
+  <text x="48" y="70" class="small">Místnost 14.8 m × 12.2 m, reference: 6.0 m od stěny s barem, 4.5 m od stěny s dveřmi.</text>
+
+  <!-- Room footprint on paper: horizontal 14.8m, vertical 12.2m -->
+  <rect x="140" y="100" width="888" height="732" class="room"/>
+
+  <!-- Main dimensions -->
+  <line x1="140" y1="862" x2="1028" y2="862" class="dim"/>
+  <text x="500" y="852" class="txt">14.8 m (délka)</text>
+
+  <line x1="104" y1="100" x2="104" y2="832" class="dim"/>
+  <text x="66" y="500" class="txt" transform="rotate(-90 66,500)">12.2 m (šířka)</text>
+
+  <!-- Bar (muted) on top wall -->
+  <rect x="140" y="146" width="420" height="44" class="bar obj"/>
+  <text x="300" y="174" class="small">bar</text>
+
+  <!-- Door (muted), left wall, 3.6m from top corner -->
+  <rect x="132" y="300" width="16" height="92" class="door obj"/>
+  <line x1="122" y1="100" x2="122" y2="346" class="aux"/>
+  <text x="58" y="256" class="small" transform="rotate(-90 58,256)">dveře 3.6 m od rohu</text>
+
+  <!-- O reference: 4.5m from left wall, 6.0m from top bar wall -->
+  <!-- px: (410,460) -->
+  <circle cx="410" cy="460" r="4" fill="#0f172a"/>
+  <text x="420" y="454" class="small">O (čelo PA)</text>
+
+  <line x1="140" y1="460" x2="410" y2="460" class="aux"/>
+  <line x1="410" y1="100" x2="410" y2="460" class="aux"/>
+
+  <line x1="140" y1="438" x2="410" y2="438" class="dim"/>
+  <text x="246" y="430" class="txt">4.5 m od stěny s dveřmi</text>
+
+  <line x1="432" y1="100" x2="432" y2="460" class="dim"/>
+  <text x="442" y="286" class="txt">6.0 m od stěny s barem</text>
+
+  <!-- Rear dimensions (swapped as requested) -->
+  <line x1="410" y1="482" x2="1028" y2="482" class="dim"/>
+  <text x="664" y="474" class="txt">10.3 m dozadu (k protilehlé stěně)</text>
+
+  <line x1="454" y1="460" x2="454" y2="832" class="dim"/>
+  <text x="464" y="656" class="txt">6.2 m dozadu (k protilehlé stěně)</text>
+
+  <!-- Desk: rotated by +90° from previous state -->
+  <g transform="translate(410,460) rotate(135)">
+    <rect x="-90" y="-35" width="180" height="70" rx="8" class="desk obj"/>
+  </g>
+  <text x="304" y="578" class="small">stůl (+135° CCW)</text>
+
+  <!-- Speaker array: unchanged orientation -->
+  <g transform="translate(410,460) rotate(135)">
+    <!-- Tops footprint 0.438 x 0.358 m -->
+    <rect x="-69" y="-18" width="26.28" height="21.48" class="top obj"/>
+    <rect x="42.72" y="-18" width="26.28" height="21.48" class="top obj"/>
+    <!-- Subs footprint 0.523 x 0.724 m -->
+    <rect x="-42" y="10" width="31.38" height="43.44" class="sub obj"/>
+    <rect x="10.62" y="10" width="31.38" height="43.44" class="sub obj"/>
+  </g>
+  <text x="534" y="350" class="small">array (beze změny)</text>
+
+  <!-- Clean angle labels (without odd arc arrow) -->
+  <text x="546" y="372" class="small">stůl: +135°</text>
+  <text x="546" y="392" class="small">array: +135°</text>
+
+  <!-- Sound direction: away from bar/door corner -->
+  <line x1="410" y1="460" x2="650" y2="460" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="662" y="466" class="small">směr zvuku k publiku</text>
+
+  <!-- Single measurement point M1 on axis, 2.5m -->
+  <circle cx="560" cy="460" r="7" class="m1"/>
+  <text x="572" y="456" class="txt">M1</text>
+  <line x1="410" y1="460" x2="560" y2="460" class="aux"/>
+  <text x="468" y="452" class="txt">2.5 m (osa k M1)</text>
+
+  <text x="920" y="130" class="txt">Legenda</text>
+  <text x="920" y="156" class="small">- M1 = hlavní měřicí bod.</text>
+  <text x="920" y="180" class="small">- Top: 0.438 × 0.358 m.</text>
+  <text x="920" y="204" class="small">- Sub: 0.523 × 0.724 m.</text>
+  <text x="920" y="228" class="small">- Bar/dveře zakresleny tlumeně.</text>
+
+  <text x="140" y="926" class="small">Pozn.: Technický pracovní nákres pro repliku postavení a měření.</text>
+</svg>

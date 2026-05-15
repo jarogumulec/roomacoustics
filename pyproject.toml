@@ -1,0 +1,18 @@
+[project]
+name = "roomacoustics"
+version = "0.1.0"
+description = "Room acoustics measurement archive and PA tuning notes"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[dependency-groups]
+analysis = [
+  "matplotlib>=3.9",
+  "numpy>=2.0",
+  "pandas>=2.2",
+  "scipy>=1.13",
+]
+
+[tool.uv]
+default-groups = []

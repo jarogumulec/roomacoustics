@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760">
+  <defs>
+    <marker id="arr2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
+    </marker>
+    <style>
+      .ground { stroke:#334155; stroke-width:3; }
+      .top { fill:#2563eb; stroke:#1e3a8a; stroke-width:2; }
+      .sub { fill:#111827; stroke:#000; stroke-width:2; }
+      .dim { stroke:#64748b; stroke-width:2; marker-start:url(#arr2); marker-end:url(#arr2); }
+      .guide { stroke:#94a3b8; stroke-width:1.5; stroke-dasharray:6 5; }
+      .txt { font: 18px 'Segoe UI', sans-serif; fill:#0f172a; }
+      .small { font: 14px 'Segoe UI', sans-serif; fill:#334155; }
+      .title { font: 24px 'Segoe UI Semibold', sans-serif; fill:#0f172a; }
+    </style>
+  </defs>
+
+  <text x="40" y="42" class="title">Pohled od diváků (elevace, měřítko 1 m = 150 px)</text>
+  <text x="40" y="66" class="small">Vyznačeny výšky center, rozestupy center a princip předsazení subů.</text>
+
+  <!-- Ground -->
+  <line x1="90" y1="660" x2="1190" y2="660" class="ground"/>
+  <text x="1100" y="650" class="small">podlaha</text>
+
+  <!-- Reference center line -->
+  <line x1="640" y1="110" x2="640" y2="660" class="guide"/>
+  <text x="648" y="126" class="small">osa setupu</text>
+
+  <!-- Tops: W x H = 0.438 x 0.716 m -->
+  <!-- centers y = 1.9 m -> 285 px above ground -->
+  <!-- top center x positions +/-1.15 m -->
+  <rect x="400" y="268" width="66" height="107" class="top"/>
+  <rect x="814" y="268" width="66" height="107" class="top"/>
+  <text x="390" y="256" class="small">TOP_LEFT</text>
+  <text x="808" y="256" class="small">TOP_RIGHT</text>
+
+  <!-- Subs: W x H = 0.523 x 0.692 m -->
+  <!-- centers y = 0.45 m -> 67.5 px above ground -->
+  <!-- sub center x positions +/-0.36 m -->
+  <rect x="552" y="541" width="78" height="104" class="sub"/>
+  <rect x="650" y="541" width="78" height="104" class="sub"/>
+  <text x="546" y="532" class="small">SUB_LEFT</text>
+  <text x="648" y="532" class="small">SUB_RIGHT</text>
+
+  <!-- center dots -->
+  <circle cx="433" cy="375" r="4" fill="#0f172a"/>
+  <circle cx="847" cy="375" r="4" fill="#0f172a"/>
+  <circle cx="591" cy="592.5" r="4" fill="#0f172a"/>
+  <circle cx="689" cy="592.5" r="4" fill="#0f172a"/>
+
+  <!-- top spacing -->
+  <line x1="433" y1="218" x2="847" y2="218" class="dim"/>
+  <text x="602" y="206" class="txt">2.3 m (střed-střed topy)</text>
+
+  <!-- sub spacing -->
+  <line x1="591" y1="624" x2="689" y2="624" class="dim"/>
+  <text x="576" y="616" class="small">0.72 m (střed-střed suby)</text>
+
+  <!-- center heights -->
+  <line x1="980" y1="660" x2="980" y2="375" class="dim"/>
+  <text x="990" y="520" class="txt">1.9 m</text>
+  <line x1="1040" y1="660" x2="1040" y2="592.5" class="dim"/>
+  <text x="1050" y="632" class="txt">0.45 m</text>
+
+  <!-- difference -->
+  <line x1="920" y1="375" x2="920" y2="592.5" class="dim"/>
+  <text x="930" y="493" class="txt">1.45 m rozdíl center</text>
+
+  <!-- depth offset note -->
+  <text x="90" y="704" class="small">Předsazení subů o 0.5 m je v půdorysu (hloubka), v elevaci není vidět jako boční posun.</text>
+</svg>
