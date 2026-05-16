@@ -68,6 +68,11 @@ TODO potvrzené pro příští návštěvu:
 - doplnit `repro only` série, minimálně `SUB_ONLY_LR` a `TOP_ONLY_LR`
 - pokud bude čas, doplnit i jednotlivé strany a jednotlivé bedny
 
+Poznámka k room-acoustics části:
+
+- pokud bude cílem zpřesnit `RT60` a Schröderovu frekvenci, vybírat hlavně reprezentativní body v běžné části haly
+- rohy a body těsně za PA brát jen jako doplňkové diagnostické body, ne jako hlavní základ pro výpočet celé místnosti
+
 ### Krok A: Bedny zvlášť (povinné)
 
 Měř a ukládej v tomto pořadí:

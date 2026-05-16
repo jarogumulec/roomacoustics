@@ -142,6 +142,12 @@ Co z jednoho měření naopak ještě nelze tvrdit dost jistě:
 - přesnou mapu problémových módů v publiku
 - jak se decay mění napříč dancefloorem a mimo osu PA
 
+Metodická poznámka pro příště:
+
+- pro lepší odhad `RT60` a Schröderovy frekvence mají prioritu typické body v hlavní části haly
+- rohy, body těsně za aparátem nebo jiné extrémní pozice jsou užitečné hlavně pro diagnostiku módových maxim / minim a zadního spillu
+- tyto extrémní body by ale neměly být hlavním podkladem pro reprezentativní odhad celé místnosti
+
 ## 2.7 TODO pro další sérii
 
 - doplnit minimálně `2-3` další měřicí pozice v publiku
