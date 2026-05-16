@@ -76,6 +76,43 @@
 
 Interpretace: prostor přidává subbasový tlak a současně rozmazává atak kopáku. Vnímaný výsledek je měkčí bas bez jasné hrany v kritickém pásmu kolem crossoveru.
 
+## RT60, Schröder a modalita
+
+- Přibližný objem haly: **2094 m3**
+- Středopásmový `T30` (500-2000 Hz): cca **1.75 s**
+- Pracovní Schröderova frekvence: cca **57.7 Hz**
+
+### Použité rovnice
+
+- `V = L × W × H`
+- `f_s ≈ 2000 × sqrt(RT60 / V)`
+- `A = 0.161 × V / RT60`
+- `f_n = n × c / (2d)`, kde `c ≈ 343 m/s`
+
+Dosazení pro Industru:
+- `V = 14.8 × 12.2 × 11.6 = 2094.5 m3`
+- `f_s ≈ 2000 × sqrt(1.746 / 2094.5) = 57.7 Hz`
+- `A = 0.161 × 2094.5 / 1.746 = 193.1 sabin`
+
+Prakticky:
+- pod cca **58 Hz** se prostor chová převážně modálně
+- pásmo **60-120 Hz** je přechodové: stále v něm hrají roli módy, ale už i geometrie systému a interference sub/top
+
+### Pracovní modal mapa 20-120 Hz
+
+- délka 14.8 m: 23.2, 34.8, 46.4, 57.9, 69.5, 81.1, 92.7, 104.3, 115.9 Hz
+- šířka 12.2 m: 28.1, 42.2, 56.2, 70.3, 84.3, 98.4, 112.5 Hz
+- výška 11.6 m: 29.6, 44.4, 59.1, 73.9, 88.7, 103.5, 118.3 Hz
+
+Nejdůležitější shluky jsou kolem **35-45 Hz**, **56-59 Hz** a **69-74 Hz**. To dobře sedí na peak kolem 40 Hz i na problematické pásmo punch/kick.
+
+![Modal map](Industra/docs/modal_map_industra_20_120.svg)
+
+Graf ukazuje jednotlivé axiální módy, shluky v pásmech důležitých pro měření a přerušovanou čáru pracovní Schröderovy frekvence.
+
+Poznámka:
+- za DJem je patro z kovové konstrukce, takže kvádrový model místnosti je jen první přiblížení; pro lokální rozložení odrazů a tlakových maxim to není úplně čistý kvádr
+
 ## Co to pravděpodobně způsobuje
 
 - Room módy velké haly (14.8 x 12.2 x 11.6 m)
@@ -127,9 +164,11 @@ Praktický závěr:
 
   <script id="md-room" type="text/plain">## Prostor
 
-- Industra Coffee, Brno
+- Industra Coffee
 - Rozměry: **14.8 x 12.2 x 11.6 m**
+- Přibližný objem: **2094 m3**
 - Charakter: velká hala, otevřený prostor, tvrdé povrchy
+- Za DJem je patro z kovové konstrukce, takže zadní část prostoru není akusticky úplně čistý kvádr
 
 ### Kritický dopad prostoru
 
@@ -175,7 +214,7 @@ Praktický závěr:
 
 1. Timing reference: loopback (vstup = výstup reference)
 2. Gain: fixní, bez změn v sérii
-3. Pozice: M1 primární, případně +2 body okolo
+3. Pozice: M1 primární, případně +2 až +3 body okolo
 4. Zapsat výchozí routing, polaritu, crossover a delay
 
 ## Ověření postavení (před timing maticí)
@@ -187,6 +226,10 @@ Pro obě varianty změřit minimálně:
 1. `SUB_ONLY_LR`
 2. `TOP_ONLY_LR`
 3. `FULL_LR_base`
+
+TODO potvrzené pro příští návštěvu:
+- doplnit `2-3` další měřicí body v publiku
+- doplnit `repro only` série minimálně `SUB_ONLY_LR` a `TOP_ONLY_LR`
 
 ## Měřicí plán
 

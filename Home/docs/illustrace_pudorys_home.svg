@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1460" height="920" viewBox="0 0 1460 920">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+    <style>
+      .room { fill:#f8fafc; stroke:#334155; stroke-width:3; }
+      .wall-note { fill:#e2e8f0; stroke:#94a3b8; }
+      .speaker { fill:#2563eb; stroke:#1e3a8a; stroke-width:2; }
+      .center { fill:#f8fafc; stroke:#1e3a8a; stroke-width:1.8; }
+      .axis { stroke:#94a3b8; stroke-width:1.6; stroke-dasharray:6 5; }
+      .dim { stroke:#64748b; stroke-width:2; marker-start:url(#arrow); marker-end:url(#arrow); }
+      .guide { stroke:#cbd5e1; stroke-width:1.2; stroke-dasharray:5 4; }
+      .detail { fill:#ffffff; stroke:#94a3b8; stroke-width:2; }
+      .detail-wall { fill:#dbe4f0; stroke:#94a3b8; stroke-width:1.5; }
+      .detail-speaker { fill:#2563eb; stroke:#1e3a8a; stroke-width:2; }
+      .txt { font: 18px 'Segoe UI', sans-serif; fill:#0f172a; }
+      .small { font: 14px 'Segoe UI', sans-serif; fill:#334155; }
+      .title { font: 26px 'Segoe UI Semibold', sans-serif; fill:#0f172a; }
+      .pos { fill:#dc2626; }
+    </style>
+  </defs>
+
+  <text x="48" y="42" class="title">Home · technický půdorys</text>
+  <text x="48" y="68" class="small">Rozměry místnosti 7.0 m × 4.9 m, B&amp;W 685, půdorys repro kreslen skutečným footprintem 198 × 331 mm.</text>
+
+  <!-- scale 1 m = 140 px ; width 7.0m => 980 px, depth 4.9m => 686 px -->
+  <rect x="180" y="110" width="980" height="686" class="room"/>
+
+  <line x1="180" y1="834" x2="1160" y2="834" class="dim"/>
+  <text x="640" y="824" class="txt">7.0 m</text>
+
+  <line x1="140" y1="110" x2="140" y2="796" class="dim"/>
+  <text x="106" y="470" class="txt" transform="rotate(-90 106,470)">4.9 m</text>
+
+  <text x="768" y="102" class="small">L repro</text>
+  <text x="1086" y="102" class="small">R repro</text>
+
+  <line x1="824.14" y1="165.44" x2="824.14" y2="796" class="axis"/>
+  <line x1="1132.14" y1="165.44" x2="1132.14" y2="796" class="axis"/>
+
+  <line x1="1154" y1="110" x2="1154" y2="119.1" class="dim"/>
+  <text x="1170" y="122" class="small">6.5 cm za oběma skříněmi</text>
+
+  <line x1="1146" y1="186" x2="1160" y2="186" class="dim"/>
+  <text x="1180" y="190" class="small">10 cm pravá bočnice → pravá stěna</text>
+
+  <line x1="1132.14" y1="142.27" x2="670" y2="142.27" class="guide"/>
+
+  <!-- spacing -->
+  <line x1="824.14" y1="214" x2="1132.14" y2="214" class="dim"/>
+  <text x="915" y="206" class="txt">2.20 m střed-střed</text>
+
+  <!-- listener positions -->
+  <circle cx="978.14" cy="362" r="8" class="pos"/>
+  <text x="994" y="356" class="txt">u TV</text>
+  <text x="994" y="378" class="small">cca 1.80 m od přední stěny</text>
+
+  <circle cx="978.14" cy="680" r="8" class="pos"/>
+  <text x="994" y="674" class="txt">gauč</text>
+  <text x="994" y="696" class="small">cca 4.0 m od repro</text>
+
+  <circle cx="670" cy="453" r="8" class="pos"/>
+  <text x="686" y="447" class="txt">střed obýváku</text>
+  <text x="686" y="469" class="small">orientační L+R reference</text>
+
+  <!-- listening axis -->
+  <line x1="978.14" y1="142.27" x2="978.14" y2="720" class="axis"/>
+  <text x="994" y="136" class="small">hlavní osa poslechu</text>
+
+  <text x="558" y="100" class="small">stěna za repro / TV stěna</text>
+
+  <!-- speakers near top wall: exact footprint 198 x 331 mm, drawn above wall label so they stay visible -->
+  <rect x="810.28" y="119.1" width="27.72" height="46.34" class="speaker"/>
+  <rect x="1118.28" y="119.1" width="27.72" height="46.34" class="speaker"/>
+  <circle cx="824.14" cy="142.27" r="4.2" class="center"/>
+  <circle cx="1132.14" cy="142.27" r="4.2" class="center"/>
+
+  <!-- enlarged detail for real gap and depth -->
+  <rect x="1190" y="372" width="230" height="220" class="detail"/>
+  <text x="1210" y="402" class="txt">Detail u stěny</text>
+  <rect x="1218" y="426" width="172" height="18" class="detail-wall"/>
+  <text x="1224" y="420" class="small">TV stěna</text>
+  <rect x="1292" y="476" width="54" height="90" class="detail-speaker"/>
+  <line x1="1319" y1="444" x2="1319" y2="476" class="dim"/>
+  <text x="1332" y="464" class="small">6.5 cm</text>
+  <line x1="1362" y1="476" x2="1412" y2="476" class="dim"/>
+  <text x="1368" y="468" class="small">10 cm</text>
+  <line x1="1270" y1="476" x2="1270" y2="566" class="dim"/>
+  <text x="1240" y="526" class="small" transform="rotate(-90 1240,526)">33.1 cm hloubka</text>
+  <line x1="1292" y1="584" x2="1346" y2="584" class="dim"/>
+  <text x="1298" y="604" class="small">19.8 cm šířka</text>
+  <text x="1210" y="548" class="small">Měřítko detailu je zvětšené jen pro čitelnost.</text>
+  <text x="1210" y="570" class="small">Hlavní půdorys nahoře zůstává v poměru místnosti.</text>
+
+  <text x="1190" y="640" class="txt">B&amp;W 685</text>
+  <text x="1190" y="670" class="small">- 2-way bass reflex, 165 mm + 25 mm</text>
+  <text x="1190" y="696" class="small">- footprint v plánku: 198 × 331 mm</text>
+  <text x="1190" y="722" class="small">- střed skříně je cca 23.1 cm od zadní stěny</text>
+  <text x="1190" y="748" class="small">- střed pravé skříně je cca 19.9 cm od pravé stěny</text>
+  <text x="1190" y="774" class="small">- repro jsou výrazně excentrické vůči místnosti</text>
+  <text x="1190" y="800" class="small">- u TV = bližší herní / kontrolní bod</text>
+  <text x="1190" y="826" class="small">- gauč = hlavní vzdálenější poslechový bod</text>
+</svg>

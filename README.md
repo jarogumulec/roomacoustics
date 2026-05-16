@@ -15,6 +15,13 @@ Kazdy prostor ma vlastni slozku se stejnou interni strukturou:
 Aktualne:
 
 - `Industra/` - JBL EON715 + PRX818XLF, mereni z 2026-04-30
+- `Home/` - BW 685, domaci stereo mereni z 2026-05-16
+
+Repo-level soubory:
+
+- `industra.html` - shareable report pro Industru
+- `home.html` - shareable report pro Home
+- `guides/` - obecne helper poznamky (naming, exporty, workflow)
 
 ## Python analyza (uv)
 

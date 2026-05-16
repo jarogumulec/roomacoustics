@@ -23,7 +23,7 @@ Aktuální návrh DSP je jen pracovní hypotéza. Finální preset vznikne až p
 Porovnat dvě instalační varianty a teprve potom řešit detailní delay/polaritu:
 
 1. Varianta A: současné postavení (suby o 0.5 m před topy).
-2. Varianta B: topy níž a předozadně zarovnané se suby (minimální hloubkový offset center).
+2. Varianta B: suby bez předsazení, topy níž a předozadně zarovnané se suby (minimální hloubkový offset center), topy co nejblíž ke středu stejné strany a zhruba do výšky uší hlavní zóny.
 
 Pro obě varianty změřit minimum:
 
@@ -62,6 +62,12 @@ Poznámka: trvalé „top na max“ často zhoršuje headroom. Pro měření je 
 
 ## 4) Sekvenční měřicí plán
 
+TODO potvrzené pro příští návštěvu:
+
+- doplnit `2-3` další měřicí body v publiku
+- doplnit `repro only` série, minimálně `SUB_ONLY_LR` a `TOP_ONLY_LR`
+- pokud bude čas, doplnit i jednotlivé strany a jednotlivé bedny
+
 ### Krok A: Bedny zvlášť (povinné)
 
 Měř a ukládej v tomto pořadí:
@@ -75,9 +81,20 @@ Měř a ukládej v tomto pořadí:
 
 Smysl: odhalit asymetrie levá/pravá ještě před kombinováním systému.
 
+### Krok A2: Same-side kontrola (doporučené)
+
+Ještě před celým `FULL_LR` dává smysl změřit i jednotlivé strany systému:
+
+7. `FULL_LEFT_base`
+8. `FULL_RIGHT_base`
+
+Smysl:
+- snáz se ladí `L sub` proti `L top` a `R sub` proti `R top` než rovnou celé `L+R`
+- pomůže to oddělit problém jedné strany od problému celého parketu
+
 ### Krok B: Bedny spolu (výchozí FULL)
 
-7. `FULL_LR_base` (delay 0.0 ms, normal polarita)
+9. `FULL_LR_base` (delay 0.0 ms, normal polarita)
 
 Smysl: mít referenční FULL křivku pro všechny další varianty.
 
@@ -85,14 +102,14 @@ Smysl: mít referenční FULL křivku pro všechny další varianty.
 
 Ve FULL ON (suby+topy současně) měř:
 
-8. `FULL_delay_0.0_normal`
-9. `FULL_delay_0.2_normal`
-10. `FULL_delay_0.4_normal`
-11. `FULL_delay_0.6_normal`
-12. `FULL_delay_0.0_invert`
-13. `FULL_delay_0.2_invert`
-14. `FULL_delay_0.4_invert`
-15. `FULL_delay_0.6_invert`
+10. `FULL_delay_0.0_normal`
+11. `FULL_delay_0.2_normal`
+12. `FULL_delay_0.4_normal`
+13. `FULL_delay_0.6_normal`
+14. `FULL_delay_0.0_invert`
+15. `FULL_delay_0.2_invert`
+16. `FULL_delay_0.4_invert`
+17. `FULL_delay_0.6_invert`
 
 Pokud minimum vychází mezi kroky, doplň jemněji (např. 0.1 ms kolem nejlepší varianty).
 
@@ -113,6 +130,10 @@ Sekundární metriky:
 - Pásmo 35-45 Hz (boom)
 - Decay/waterfall v basech
 - Subjektivní kick čitelnost
+
+Poznámka:
+- delay zarovnaný do sweet spotu je nutná, ale ne dostačující podmínka
+- finální výběr musí potvrdit, že se sub a top v crossover pásmu opravdu sčítají pozitivně; proto je součástí matice i `invert`
 
 Akceptační pravidlo:
 

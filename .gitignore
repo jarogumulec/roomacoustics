@@ -9,6 +9,9 @@ __pycache__/
 # Jupyter
 .ipynb_checkpoints/
 
+# Editor-local config
+.vscode/
+
 
 specs
 photos

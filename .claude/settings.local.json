@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p /tmp/specs_copy)",
+      "Bash(cp Doma/specs/*.png /tmp/specs_copy/)",
+      "Read(//tmp/**)"
+    ]
+  }
+}

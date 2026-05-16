@@ -85,18 +85,18 @@
   <text x="546" y="372" class="small">stůl: +135°</text>
   <text x="546" y="392" class="small">array: +135°</text>
 
-  <!-- Sound direction: away from bar/door corner -->
-  <line x1="410" y1="460" x2="650" y2="460" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
-  <text x="662" y="466" class="small">směr zvuku k publiku</text>
+  <!-- Sound direction: +135° CCW -->
+  <line x1="410" y1="460" x2="240" y2="290" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="172" y="276" class="small">směr zvuku k publiku (+135° CCW)</text>
 
   <!-- Single measurement point M1 on axis, 2.5m -->
-  <circle cx="560" cy="460" r="7" class="m1"/>
-  <text x="572" y="456" class="txt">M1</text>
-  <line x1="410" y1="460" x2="560" y2="460" class="aux"/>
-  <text x="468" y="452" class="txt">2.5 m (osa k M1)</text>
+  <circle cx="304" cy="354" r="7" class="m1"/>
+  <text x="316" y="350" class="txt">M1</text>
+  <line x1="410" y1="460" x2="304" y2="354" class="aux"/>
+  <text x="322" y="402" class="txt">2.5 m (osa k M1, +135° CCW)</text>
 
   <text x="920" y="130" class="txt">Legenda</text>
-  <text x="920" y="156" class="small">- M1 = hlavní měřicí bod.</text>
+  <text x="920" y="156" class="small">- M1 = hlavní měřicí bod na ose +135° CCW.</text>
   <text x="920" y="180" class="small">- Top: 0.438 × 0.358 m.</text>
   <text x="920" y="204" class="small">- Sub: 0.523 × 0.724 m.</text>
   <text x="920" y="228" class="small">- Bar/dveře zakresleny tlumeně.</text>

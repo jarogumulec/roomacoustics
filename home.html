@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home · B&W 685 · Zvuková měření</title>
+  <style>
+    :root { --blue:rgb(0,0,255); --yellow:rgb(255,247,42); --gray:rgb(235,235,235); --dark:#000; --text:#000; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:#fff; color:var(--text); font-family:"Helvetica Neue",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.35; }
+    .wrap { max-width:1160px; margin:0 auto; padding:18px 16px 24px; }
+    .hero { background:var(--blue); color:#fff; padding:28px 26px; margin-bottom:18px; border:1px solid var(--dark); }
+    .hero h1 { margin:0 0 8px; font-size:2rem; font-weight:900; line-height:1.02; letter-spacing:-0.02em; }
+    .hero p { margin:0; font-size:0.97rem; line-height:1.35; font-weight:600; max-width:980px; }
+    .tabs { display:flex; flex-wrap:wrap; gap:0; margin-bottom:14px; border:1px solid var(--dark); background:var(--gray); }
+    .tab-btn { border:none; background:var(--gray); color:var(--text); padding:10px 16px; font-size:0.85rem; font-weight:800; cursor:pointer; border-right:1px solid var(--dark); text-transform:uppercase; letter-spacing:0.02em; }
+    .tab-btn:last-child { border-right:none; }
+    .tab-btn:hover { background:#fff; }
+    .tab-btn.active { background:var(--yellow); }
+    .panel { display:none; }
+    .panel.active { display:block; }
+    .card { background:#fff; border:1px solid var(--dark); padding:18px 20px 20px; }
+    .md { font-size:0.88rem; line-height:1.34; }
+    .md h2 { font-size:1.08rem; margin:0.85em 0 0.3em; color:var(--blue); font-weight:900; text-transform:uppercase; }
+    .md h3 { font-size:0.95rem; margin:0.7em 0 0.26em; color:var(--dark); font-weight:800; }
+    .md p { margin:0.34em 0; }
+    .md ul { margin:0.3em 0 0.38em 1.15em; padding:0; }
+    .md li { margin:0.12em 0; }
+    .md strong { font-weight:800; }
+    .md img { max-width:100%; height:auto; margin:0.55em 0 0.75em; border:1px solid var(--dark); background:var(--gray); }
+    .gallery { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:10px; }
+    .figure { border:1px solid var(--dark); padding:10px; background:#fff; }
+    .figure h3 { margin:0 0 8px; font-size:0.9rem; text-transform:uppercase; }
+    .figure p { margin:0.35em 0 0; font-size:0.82rem; line-height:1.32; }
+    @media (max-width:760px) {
+      .hero { padding:18px 16px; }
+      .hero h1 { font-size:1.55rem; }
+      .tabs { display:grid; grid-template-columns:1fr 1fr; }
+      .tab-btn { border-right:1px solid var(--dark); border-bottom:1px solid var(--dark); }
+      .card { padding:14px; }
+      .md { font-size:0.84rem; }
+      .gallery { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>Home · B&amp;W 685 · Zvuková měření</h1>
+      <p>Domácí stereo setup bez EQ, zesilovač Denon PMA-495R v režimu source direct, měřeno v REW s loopback timing reference přes Scarlett 2i2 4th Gen a kalibrovaný t.bone MM-1. Cíl: pochopit asymetrii L/R, chování basu v pozicích u TV, gauč a střed obýváku a rozhodnout o dalším fyzickém postavení repro.</p>
+    </section>
+
+    <nav class="tabs" aria-label="Navigace">
+      <button class="tab-btn active" data-panel="setup">Setup</button>
+      <button class="tab-btn" data-panel="stav">Aktuální stav</button>
+      <button class="tab-btn" data-panel="dop">Doporučení</button>
+      <button class="tab-btn" data-panel="data">Data & názvy</button>
+    </nav>
+
+    <section id="setup" class="panel active"><article class="card"><div class="md">
+      <h2>Prostor a systém</h2>
+      <ul>
+        <li>Místnost: obývák, délka ve směru vyzařování 4.90 m, šířka 7.00 m, výška 3.30 m</li>
+        <li>Přibližný objem místnosti: 113.2 m3</li>
+        <li>Systém: stereo pár Bowers &amp; Wilkins 685</li>
+        <li>Zesilovač: Denon PMA-495R, modifikovaný / recapped by CASEA</li>
+        <li>Typ: 2-way bass reflex compact speaker</li>
+        <li>Rozměry jedné bedny: 340 × 198 × 331 mm (V × Š × H)</li>
+        <li>Půdorysný footprint jedné bedny: 198 × 331 mm</li>
+        <li>Měniče: 165 mm Kevlar cone + 25 mm aluminium dome</li>
+        <li>Citlivost / impedance / crossover: 88 dB, 8 ohm, 4 kHz</li>
+        <li>Doporučený výkon zesilovače: 25-100 W</li>
+        <li>Výška středu repro: 1.00 m</li>
+        <li>Rozteč repro: 2.20 m</li>
+        <li>Vzdálenost zadní stěny repro od zadní stěny místnosti: 6.5 cm</li>
+        <li>Z toho plyne půdorysný střed skříně cca 23.1 cm od zadní stěny místnosti</li>
+        <li>Pravá bočnice pravého repro je 10 cm od pravé stěny, střed pravé skříně cca 19.9 cm</li>
+      </ul>
+
+      <p>Publikované frekvenční údaje se v podkladech mírně liší: objevuje se `49-22 000 Hz (±3 dB)` i širší katalogové `42 Hz-50 kHz`. Pro tuto dokumentaci je důležitější reálné in-room měření než samotný katalogový rozsah.</p>
+
+      <h3>Asymetrie postavení</h3>
+      <ul>
+        <li>pravá bočnice pravého repro je 10 cm od boční stěny místnosti</li>
+        <li>levý repro je vůči místnosti výrazně excentricky jinde</li>
+        <li>malá mezera za repro i velmi těsná vazba pravého repro k boční stěně podporují jinou basovou vazbu L a R</li>
+      </ul>
+
+      <h3>Měřicí pozice</h3>
+      <ul>
+        <li><strong>u TV</strong>: bližší pozice u televize, kde se hrají hry s gamepadem; cca 1.80 m od přední stěny, přibližně v ose repro</li>
+        <li><strong>gauč</strong>: cca 4.0 m od repro, v ose repro</li>
+        <li><strong>střed obýváku</strong>: geometrický střed místnosti</li>
+      </ul>
+
+      <img src="Home/docs/illustrace_pudorys_home.svg" alt="Půdorys Home" />
+
+      <h3>Režim měření</h3>
+      <ul>
+        <li>REW, 48 kHz, 256k log sweep, 2 sweepy</li>
+        <li>sweep level: -12.2 dBFS</li>
+        <li>zvukovka / interface: Scarlett 2i2 4th Gen</li>
+        <li>mikrofon: t.bone MM-1, kalibrační křivka odečtena v REW</li>
+        <li>mikrofon na Input 1, loopback reference na Input 2</li>
+        <li>zesilovač během měření: Denon PMA-495R v režimu source direct</li>
+        <li>source direct obchází balance, bass, treble a loudness</li>
+        <li>relevantní úpravy zesilovače: EPCOS 10 000 uF filtrace, HEXFRED v hlavním zdroji, nové lokální zdroje a vyčištěné / opravené přepínače</li>
+        <li>gain mikrofonu ani zesilovače nebyly kalibrovány na absolutní SPL</li>
+      </ul>
+
+      <p>Prakticky tedy tato sada slouží hlavně pro porovnání tvaru odezvy, decay a L/R asymetrie, ne pro přesné absolutní SPL hodnocení.</p>
+    </div></article></section>
+
+    <section id="stav" class="panel"><article class="card"><div class="md">
+      <h2>Co je v datech nejdůležitější</h2>
+      <ul>
+        <li>nejhorší poslechový bod je gauč</li>
+        <li>největší problémové pásmo je cca 40-80 Hz</li>
+        <li>pravý kanál je v basech silnější než levý</li>
+        <li>hlavní problém je modalita a asymetrie, ne nedostatek basu</li>
+        <li>pracovní Schröderova frekvence místnosti vychází cca 151 Hz, takže modalita zasahuje vysoko do basu a lower-mid přechodu</li>
+      </ul>
+
+      <h3>Modalita a room metrics</h3>
+      <p>Z RT60 exportů pro <strong>u TV</strong>, <strong>gauč</strong> a <strong>střed obýváku</strong> vychází středopásmový T30 přibližně 0.62-0.66 s. Z rozměrů 4.9 × 7.0 × 3.3 m pak vychází pracovní Schröderova frekvence zhruba 148-153 Hz, průměrně cca 151 Hz.</p>
+      <p>To znamená, že většina pásma do cca 150 Hz je ještě významně ovlivněná módy místnosti. To dobře sedí na reálné problémy kolem 44-50 Hz a 70-75 Hz.</p>
+
+      <h3>Použité rovnice</h3>
+      <ul>
+        <li><code>V = L × W × H</code></li>
+        <li><code>f_s ≈ 2000 × sqrt(RT60 / V)</code></li>
+        <li><code>A = 0.161 × V / RT60</code></li>
+        <li><code>f_n = n × c / (2d)</code>, kde <code>c ≈ 343 m/s</code></li>
+      </ul>
+      <p>Dosazení pro Home: <code>V = 4.9 × 7.0 × 3.3 = 113.19 m3</code>, <code>f_s(avg) ≈ 2000 × sqrt(0.648 / 113.19) = 151.3 Hz</code>.</p>
+
+      <h3>Pracovní modal mapa 20-120 Hz</h3>
+      <ul>
+        <li>délka 4.9 m: 35.0, 70.0, 105.0 Hz</li>
+        <li>šířka 7.0 m: 24.5, 49.0, 73.5, 98.0 Hz</li>
+        <li>výška 3.3 m: 52.0, 103.9 Hz</li>
+      </ul>
+      <p>Nejdůležitější shluky vycházejí kolem 44-52 Hz a 70-74 Hz, což odpovídá i reálně naměřeným peakům a buildupům v jednotlivých pozicích.</p>
+      <img src="Home/docs/modal_map_home_20_160.svg" alt="Modal map Home 20-160 Hz" />
+      <p>Graf ukazuje, že modální oblast doma zasahuje vysoko, prakticky až k pracovní Schröderově frekvenci kolem 151 Hz.</p>
+      <img src="Home/docs/room_metrics_home_positions.svg" alt="Room metrics Home positions" />
+      <p>Souhrnný graf T30 a odvozené Schröderovy frekvence mezi pozicemi potvrzuje, že gauč je kritický hlavně v LF buildupu, ne nutně v dramaticky vyšším středopásmovém RT60.</p>
+
+      <h3>Loopback delay z exportů</h3>
+      <p><strong>u TV</strong>: L 4.5798 ms, R 6.4464 ms, L+R 5.0806 ms</p>
+      <p><strong>gauč</strong>: L 10.3264 ms, R 11.6238 ms, L+R 10.4477 ms</p>
+      <p><strong>střed obýváku</strong>: L+R 6.4579 ms</p>
+
+      <h3>Praktické shrnutí po pozicích</h3>
+      <p><strong>u TV</strong>: použitelnější referenční bod. V basech je stále asymetrie, ale méně destruktivní než na gauči.</p>
+      <p><strong>gauč</strong>: nejsilnější buildup kolem 44-50 Hz a delší decay. Reálný poslechový problém bude nejspíš právě tady.</p>
+      <p><strong>střed obýváku</strong>: orientační L+R reference mezi oběma extrémy, ne plně diagnostická pozice.</p>
+
+      <h3>RT60 / decay</h3>
+      <p><strong>L+R u TV</strong>: T30 cca 0.94 s na 50 Hz, 0.51 s na 80 Hz, 0.52 s na 100 Hz.</p>
+      <p><strong>L+R gauč</strong>: T30 cca 1.04 s na 50 Hz, 0.72 s na 80 Hz, 0.65 s na 100 Hz.</p>
+      <p><strong>L+R střed obýváku</strong>: 80-100 Hz je mezi oběma extrémy; 50 Hz tu nevychází tak spolehlivě.</p>
+
+      <h2>SPL A RT60 PNG</h2>
+      <div class="gallery">
+        <div class="figure">
+          <h3>SPL u TV</h3>
+          <img src="Home/measurements/spl_u TV.png" alt="SPL u TV" />
+          <p>Overlay pro pozici u TV potvrzuje použitelnější kontrolní bod a menší extrém v nejnižším basu než na gauči.</p>
+        </div>
+        <div class="figure">
+          <h3>SPL Gauč</h3>
+          <img src="Home/measurements/spl_sedacka.png" alt="SPL gauc" />
+          <p>Na gauči je vidět problematičtější tvar basové odezvy a větší důvod řešit fyzické postavení před EQ.</p>
+        </div>
+        <div class="figure">
+          <h3>SPL Repro Zvlášť</h3>
+          <img src="Home/measurements/SPL rerpo zvlast.png" alt="SPL repro zvlast" />
+          <p>Samostatné L/R křivky potvrzují reálnou asymetrii mezi kanály. Tu není vhodné posuzovat jen přes L+R součet.</p>
+        </div>
+        <div class="figure">
+          <h3>SPL L+R Pozice</h3>
+          <img src="Home/measurements/spl_LR_dohromady_pozice.png" alt="SPL LR pozice" />
+          <p>Srovnání L+R mezi pozicemi ukazuje, že změna poslechového bodu zásadně mění basové chování systému.</p>
+        </div>
+        <div class="figure">
+          <h3>RT60 L u TV</h3>
+          <img src="Home/measurements/RT60_L_u_TV.png" alt="RT60 L u TV" />
+          <p>Levý kanál u TV má stále prodloužený nízký bas, ale je čitelnější než problematičtější chování na gauči.</p>
+        </div>
+        <div class="figure">
+          <h3>RT60 R u TV</h3>
+          <img src="Home/measurements/RT60_R_u TV.png" alt="RT60 R u TV" />
+          <p>Pravý kanál u TV potvrzuje větší LF aktivitu než levý, což odpovídá asymetrickému umístění repro.</p>
+        </div>
+        <div class="figure">
+          <h3>RT60 L Gauč</h3>
+          <img src="Home/measurements/RT60_l_sedacka.png" alt="RT60 L gauc" />
+          <p>Na gauči je decay v basech delší a méně čistý než u TV, i na levém kanálu.</p>
+        </div>
+        <div class="figure">
+          <h3>RT60 R Gauč</h3>
+          <img src="Home/measurements/RT60_R_sedacka.png" alt="RT60 R gauc" />
+          <p>Pravý kanál na gauči vychází jako nejproblematičtější kombinace i z pohledu RT60 / decay.</p>
+        </div>
+      </div>
+
+      <h2>Waterfall pozorování</h2>
+      <div class="gallery">
+        <div class="figure">
+          <h3>L u TV</h3>
+          <img src="Home/measurements/waterfall L u TV.png" alt="Waterfall L u TV" />
+          <p>Relativně použitelný výchozí bod. Nízký bas je stále živý, ale méně problematický než na gauči.</p>
+        </div>
+        <div class="figure">
+          <h3>R u TV</h3>
+          <img src="Home/measurements/waterfall R u TV.png" alt="Waterfall R u TV" />
+          <p>Více energie v pásmu zhruba 40-80 Hz než na levém kanálu. Potvrzuje vliv asymetrie místnosti.</p>
+        </div>
+        <div class="figure">
+          <h3>L Gauč</h3>
+          <img src="Home/measurements/waterfall L sedacka.png" alt="Waterfall L gauc" />
+          <p>Silnější akumulace basu než u TV. Gauč už vstupuje výrazněji do room-mode chování místnosti.</p>
+        </div>
+        <div class="figure">
+          <h3>R Gauč</h3>
+          <img src="Home/measurements/waterfall R sedacka.png" alt="Waterfall R gauc" />
+          <p>Nejproblematičtější kombinace z dosavadních PNG. Největší LF buildup a méně rovnoměrný decay.</p>
+        </div>
+      </div>
+    </div></article></section>
+
+    <section id="dop" class="panel"><article class="card"><div class="md">
+      <h2>Doporučení</h2>
+      <h3>1. EQ až jako poslední krok</h3>
+      <p>Současný problém je primárně geometrický. EQ by teď spíš maskovalo problém jednoho bodu a mohlo zhoršit jiný.</p>
+
+      <h3>2. u TV používat jako referenční bod</h3>
+      <p>u TV je nejrozumnější stabilní reference pro A/B změny. Gauč používat jako kontrolní reálný poslechový bod.</p>
+
+      <h3>3. Otestovat větší vzdálenost repro od zadní stěny</h3>
+      <ul>
+        <li>současný stav: zadní mezera 6.5 cm, cca 23.1 cm ke středu půdorysu skříně</li>
+        <li>test 1: zadní mezera 20 cm</li>
+        <li>test 2: zadní mezera 35-40 cm</li>
+      </ul>
+      <p>Po každé variantě změřit minimálně L u TV, R u TV, L+R u TV a L+R gauč.</p>
+
+      <h3>4. Pokud to jde, zmenšit boční asymetrii</h3>
+      <p>Pravý repro je příliš vázaný na boční stěnu. I malé zlepšení symetrie může zlepšit L/R rovnováhu v basech a stereo stabilitu.</p>
+
+      <h3>5. Doplnit chybějící diagnostiku</h3>
+      <ul>
+        <li>All SPL overlay pro každou důležitou pozici</li>
+        <li>ETC nebo impulse screenshoty aspoň pro u TV a gauč</li>
+        <li>střed obýváku držet jako lehkou L+R referenci, pokud nebude potřeba hlubší diagnostika</li>
+      </ul>
+
+      <h3>6. Jak vyhodnocovat další varianty</h3>
+      <ul>
+        <li>ne podle nejvyššího basu, ale podle menší nerovnoměrnosti</li>
+        <li>sledovat 40-80 Hz, 80-200 Hz a decay 50-100 Hz</li>
+        <li>nejprve L a R zvlášť, až potom L+R</li>
+      </ul>
+    </div></article></section>
+
+    <section id="data" class="panel"><article class="card"><div class="md">
+      <h2>Inventář měření</h2>
+      <ul>
+        <li>L uTV_doma_loopback May 16 -> u TV</li>
+        <li>R uTV_doma_loopback May 16 -> u TV</li>
+        <li>L+R uTV_doma_loopback May 16 -> u TV</li>
+        <li>L sedacka_doma_loopback -> gauč</li>
+        <li>R sedacka_doma_loopback May 16 -> gauč</li>
+        <li>L+R sedacka_doma_loopback May 16 -> gauč</li>
+        <li>L+R stred_obyvaku_doma_loopback May 16 -> střed obýváku</li>
+      </ul>
+
+      <h3>Doporučené interní aliasy</h3>
+      <ul>
+        <li>HOME_u_TV_L_2026-05-16</li>
+        <li>HOME_u_TV_R_2026-05-16</li>
+        <li>HOME_u_TV_LR_2026-05-16</li>
+        <li>HOME_gauc_L_2026-05-16</li>
+        <li>HOME_gauc_R_2026-05-16</li>
+        <li>HOME_gauc_LR_2026-05-16</li>
+        <li>HOME_stred_obyvaku_LR_2026-05-16</li>
+      </ul>
+
+      <h3>Co ukládat vždy</h3>
+      <ul>
+        <li>.mdat</li>
+        <li>SPL + Phase text export</li>
+        <li>Impulse response text export</li>
+        <li>RT60 text export</li>
+        <li>All SPL / ETC / Waterfall obrázky pro klíčové varianty</li>
+      </ul>
+
+      <p>Staré soubory není nutné hromadně přejmenovávat. Stačí držet jednotné aliasy v dokumentaci a nové session ukládat už konzistentně.</p>
+    </div></article></section>
+  </div>
+
+  <script>
+    document.querySelectorAll('.tab-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const panelId = btn.dataset.panel;
+        document.querySelectorAll('.panel').forEach((p) => p.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach((b) => b.classList.remove('active'));
+        document.getElementById(panelId).classList.add('active');
+        btn.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

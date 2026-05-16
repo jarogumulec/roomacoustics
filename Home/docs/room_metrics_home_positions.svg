@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+  <style>
+    .bg { fill: #fafafa; }
+    .axis { stroke: #111; stroke-width: 2; }
+    .grid { stroke: #d7d7d7; stroke-width: 1; }
+    .title { font: 700 24px Helvetica, Arial, sans-serif; fill: #111; }
+    .subtitle { font: 14px Helvetica, Arial, sans-serif; fill: #333; }
+    .label { font: 14px Helvetica, Arial, sans-serif; fill: #111; }
+    .small { font: 12px Helvetica, Arial, sans-serif; fill: #333; }
+    .bar1 { fill: #1f5eff; }
+    .bar2 { fill: #d97706; }
+    .bar3 { fill: #0f766e; }
+    .line { stroke: #111; stroke-width: 3; fill: none; }
+    .dot { fill: #111; }
+  </style>
+  <rect class="bg" x="0" y="0" width="1200" height="520" />
+  <text class="title" x="56" y="42">Home · RT60 / Schröder Summary by Position</text>
+  <text class="subtitle" x="56" y="66">Horní panel: T30 v 50 / 80 / 100 Hz. Dolní panel: středopásmový T30 a odvozená Schröderova frekvence.</text>
+
+  <text class="label" x="56" y="106">T30 podle pozice</text>
+  <line class="axis" x1="120" y1="260" x2="1100" y2="260" />
+  <line class="axis" x1="120" y1="100" x2="120" y2="260" />
+  <line class="grid" x1="120" y1="220" x2="1100" y2="220" />
+  <line class="grid" x1="120" y1="180" x2="1100" y2="180" />
+  <line class="grid" x1="120" y1="140" x2="1100" y2="140" />
+  <text class="small" x="88" y="264">0.0</text>
+  <text class="small" x="88" y="224">0.25</text>
+  <text class="small" x="88" y="184">0.50</text>
+  <text class="small" x="88" y="144">0.75</text>
+  <text class="small" x="88" y="104">1.00 s</text>
+
+  <g>
+    <rect class="bar1" x="170" y="109.3" width="44" height="150.7" />
+    <rect class="bar2" x="222" y="179.0" width="44" height="81.0" />
+    <rect class="bar3" x="274" y="176.5" width="44" height="83.5" />
+    <text class="small" x="196" y="284">u TV</text>
+
+    <rect class="bar1" x="446" y="94.1" width="44" height="165.9" />
+    <rect class="bar2" x="498" y="145.0" width="44" height="115.0" />
+    <rect class="bar3" x="550" y="156.2" width="44" height="103.8" />
+    <text class="small" x="468" y="284">gauč</text>
+
+    <rect class="bar1" x="722" y="147.5" width="44" height="112.5" opacity="0.45" />
+    <rect class="bar2" x="774" y="170.1" width="44" height="89.9" />
+    <rect class="bar3" x="826" y="172.3" width="44" height="87.7" />
+    <text class="small" x="724" y="284">střed obýváku</text>
+  </g>
+  <text class="small" x="170" y="304">modrá = 50 Hz</text>
+  <text class="small" x="270" y="304">oranžová = 80 Hz</text>
+  <text class="small" x="392" y="304">zelená = 100 Hz</text>
+  <text class="small" x="722" y="304">50 Hz ve středu jen T20, proto tlumeně</text>
+
+  <text class="label" x="56" y="350">Středopásmový T30 a Schröder</text>
+  <line class="axis" x1="120" y1="466" x2="1100" y2="466" />
+  <line class="axis" x1="120" y1="334" x2="120" y2="466" />
+  <line class="grid" x1="120" y1="438" x2="1100" y2="438" />
+  <line class="grid" x1="120" y1="410" x2="1100" y2="410" />
+  <line class="grid" x1="120" y1="382" x2="1100" y2="382" />
+  <line class="grid" x1="120" y1="354" x2="1100" y2="354" />
+  <text class="small" x="84" y="470">0.55</text>
+  <text class="small" x="84" y="442">0.60</text>
+  <text class="small" x="84" y="414">0.65</text>
+  <text class="small" x="84" y="386">0.70</text>
+  <text class="small" x="84" y="358">0.75 s</text>
+
+  <rect class="bar1" x="190" y="426.1" width="80" height="39.9" />
+  <rect class="bar2" x="470" y="395.0" width="80" height="71.0" />
+  <rect class="bar3" x="750" y="395.2" width="80" height="70.8" />
+  <text class="small" x="204" y="488">u TV · 0.622 s</text>
+  <text class="small" x="479" y="488">gauč · 0.661 s</text>
+  <text class="small" x="748" y="488">střed · 0.661 s</text>
+
+  <polyline class="line" points="230,383 510,344 790,344" />
+  <circle class="dot" cx="230" cy="383" r="5" />
+  <circle class="dot" cx="510" cy="344" r="5" />
+  <circle class="dot" cx="790" cy="344" r="5" />
+  <text class="small" x="242" y="378">148.2 Hz</text>
+  <text class="small" x="522" y="339">152.8 Hz</text>
+  <text class="small" x="802" y="339">152.8 Hz</text>
+  <text class="small" x="926" y="349">černá linka = Schröderova frekvence</text>
+</svg>

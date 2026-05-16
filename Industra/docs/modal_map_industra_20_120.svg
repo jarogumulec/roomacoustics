@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+  <style>
+    .bg { fill: #fafafa; }
+    .axis { stroke: #111; stroke-width: 2; }
+    .grid { stroke: #d7d7d7; stroke-width: 1; }
+    .label { font: 14px Helvetica, Arial, sans-serif; fill: #111; }
+    .small { font: 12px Helvetica, Arial, sans-serif; fill: #333; }
+    .title { font: 700 24px Helvetica, Arial, sans-serif; fill: #111; }
+    .subtitle { font: 14px Helvetica, Arial, sans-serif; fill: #333; }
+    .len { stroke: #1f5eff; stroke-width: 3; }
+    .wid { stroke: #d97706; stroke-width: 3; }
+    .hei { stroke: #0f766e; stroke-width: 3; }
+    .sch { stroke: #111; stroke-width: 2.5; stroke-dasharray: 10 8; }
+    .peak { fill: rgba(255, 99, 71, 0.16); stroke: #ef4444; stroke-width: 1.5; }
+    .kick { fill: rgba(245, 158, 11, 0.16); stroke: #f59e0b; stroke-width: 1.5; }
+    .transition { fill: rgba(59, 130, 246, 0.10); stroke: #3b82f6; stroke-width: 1.5; }
+  </style>
+  <rect class="bg" x="0" y="0" width="1200" height="520" />
+  <text class="title" x="56" y="42">Industra · Modal Map 20-120 Hz</text>
+  <text class="subtitle" x="56" y="66">Axiální módy ideálního kvádru + pracovní Schröderova frekvence a problémová pásma z měření.</text>
+
+  <rect class="peak" x="196.4" y="96" width="96.8" height="332" rx="6" />
+  <rect class="transition" x="400.0" y="96" width="48.4" height="332" rx="6" />
+  <rect class="kick" x="519.0" y="96" width="96.8" height="332" rx="6" />
+
+  <text class="small" x="208" y="116">shluk 35-45 Hz</text>
+  <text class="small" x="404" y="116">56-59 Hz</text>
+  <text class="small" x="528" y="116">69-79 Hz</text>
+
+  <line class="axis" x1="120" y1="428" x2="1100" y2="428" />
+  <line class="axis" x1="120" y1="96" x2="120" y2="428" />
+
+  <g>
+    <line class="grid" x1="120" y1="96" x2="120" y2="428" /><text class="small" x="111" y="450">20</text>
+    <line class="grid" x1="218" y1="96" x2="218" y2="428" /><text class="small" x="209" y="450">30</text>
+    <line class="grid" x1="316" y1="96" x2="316" y2="428" /><text class="small" x="307" y="450">40</text>
+    <line class="grid" x1="414" y1="96" x2="414" y2="428" /><text class="small" x="405" y="450">50</text>
+    <line class="grid" x1="512" y1="96" x2="512" y2="428" /><text class="small" x="503" y="450">60</text>
+    <line class="grid" x1="610" y1="96" x2="610" y2="428" /><text class="small" x="601" y="450">70</text>
+    <line class="grid" x1="708" y1="96" x2="708" y2="428" /><text class="small" x="699" y="450">80</text>
+    <line class="grid" x1="806" y1="96" x2="806" y2="428" /><text class="small" x="797" y="450">90</text>
+    <line class="grid" x1="904" y1="96" x2="904" y2="428" /><text class="small" x="891" y="450">100</text>
+    <line class="grid" x1="1002" y1="96" x2="1002" y2="428" /><text class="small" x="989" y="450">110</text>
+    <line class="grid" x1="1100" y1="96" x2="1100" y2="428" /><text class="small" x="1087" y="450">120</text>
+  </g>
+
+  <text class="label" x="44" y="164">délka</text>
+  <text class="label" x="42" y="264">šířka</text>
+  <text class="label" x="46" y="364">výška</text>
+  <text class="small" x="1080" y="472">Hz</text>
+
+  <g>
+    <line class="len" x1="151.2" y1="132" x2="151.2" y2="196" />
+    <line class="len" x1="264.7" y1="132" x2="264.7" y2="196" />
+    <line class="len" x1="378.2" y1="132" x2="378.2" y2="196" />
+    <line class="len" x1="491.8" y1="132" x2="491.8" y2="196" />
+    <line class="len" x1="605.3" y1="132" x2="605.3" y2="196" />
+    <line class="len" x1="718.9" y1="132" x2="718.9" y2="196" />
+    <line class="len" x1="832.5" y1="132" x2="832.5" y2="196" />
+    <line class="len" x1="946.0" y1="132" x2="946.0" y2="196" />
+    <line class="len" x1="1059.6" y1="132" x2="1059.6" y2="196" />
+  </g>
+
+  <g>
+    <line class="wid" x1="199.5" y1="232" x2="199.5" y2="296" />
+    <line class="wid" x1="337.3" y1="232" x2="337.3" y2="296" />
+    <line class="wid" x1="475.2" y1="232" x2="475.2" y2="296" />
+    <line class="wid" x1="613.0" y1="232" x2="613.0" y2="296" />
+    <line class="wid" x1="750.9" y1="232" x2="750.9" y2="296" />
+    <line class="wid" x1="888.7" y1="232" x2="888.7" y2="296" />
+    <line class="wid" x1="1026.5" y1="232" x2="1026.5" y2="296" />
+  </g>
+
+  <g>
+    <line class="hei" x1="213.8" y1="332" x2="213.8" y2="396" />
+    <line class="hei" x1="358.7" y1="332" x2="358.7" y2="396" />
+    <line class="hei" x1="503.6" y1="332" x2="503.6" y2="396" />
+    <line class="hei" x1="648.4" y1="332" x2="648.4" y2="396" />
+    <line class="hei" x1="793.3" y1="332" x2="793.3" y2="396" />
+    <line class="hei" x1="938.2" y1="332" x2="938.2" y2="396" />
+    <line class="hei" x1="1083.1" y1="332" x2="1083.1" y2="396" />
+  </g>
+
+  <line class="sch" x1="490.5" y1="96" x2="490.5" y2="428" />
+  <text class="small" x="500" y="142">f_s ≈ 57.7 Hz</text>
+  <text class="small" x="307" y="408">peak měření 39.7 Hz</text>
+  <text class="small" x="568" y="408">kick dip 77.2 Hz</text>
+
+  <rect x="120" y="478" width="16" height="10" fill="#1f5eff" /><text class="small" x="142" y="487">módy podle délky</text>
+  <rect x="276" y="478" width="16" height="10" fill="#d97706" /><text class="small" x="298" y="487">módy podle šířky</text>
+  <rect x="432" y="478" width="16" height="10" fill="#0f766e" /><text class="small" x="454" y="487">módy podle výšky</text>
+  <line class="sch" x1="602" y1="483" x2="632" y2="483" /><text class="small" x="642" y="487">Schröderova frekvence</text>
+</svg>

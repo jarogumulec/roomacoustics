@@ -6,10 +6,17 @@ Tento dokument je šablona pro konzistentní záznam. Vyplňovat při každé ak
 
 - Název prostoru: Industra
 - Rozměry (d × š × v): 14.8 m × 12.2 m × 11.6 m
+- Přibližný objem: cca 2094 m3
+- Důležitá stavební poznámka: za DJem je patro z kovové konstrukce
 - Typ prostoru: velká hala, otevřený charakter
 - Povrchy: převážně tvrdé (upřesnit při dalším měření)
 - Kritické odrazy: velké stěny a vysoký strop
 - Publiková zóna: před směrováním PA (dancefloor)
+
+Poznámka k modelu místnosti:
+- výpočty módů a Schröderovy frekvence níže berou halu jako první přiblížení ideálním kvádrem
+- patro z kovové konstrukce za DJem ten model lokálně narušuje, hlavně v zadní části prostoru a v rozložení odrazů
+- čísla proto brát jako užitečný první odhad, ne jako přesný normový model celé haly
 
 Souřadný systém pro záznam:
 - Osa X: hloubka od stěny s barem (14.8 m)
@@ -21,7 +28,7 @@ Souřadný systém pro záznam:
 	- 6.0 m od stěny s barem
 	- 4.5 m od stěny s dveřmi
 	- za PA je více prostoru než před PA
-- Natočení PA: cca 45°
+- Natočení PA / podium osa: cca 135° proti směru hodinových ručiček
 - Vzdálenost repro -> roh místnosti: cca 8 m
 
 - Prostor za DJ/PA (dozadu):
@@ -44,6 +51,10 @@ Souřadný systém pro záznam:
 - Vztah středu basu vůči středu výšky (na stejné straně):
 	- výškový rozdíl středů: 1.45 m (1.90 - 0.45)
 	- hloubkový offset: sub je o 0.5 m blíž k publiku
+
+Pracovní instalační poznámka pro další měření:
+- jako alternativní výchozí varianta dává smysl testovat suby bez předsazení, topy co nejblíž nad suby a topy zhruba do výšky uší hlavní zóny
+- cílem této varianty je zmenšit geometrický offset center ještě před DSP delayem
 
 ## 3) Signálový řetězec a DSP
 
@@ -93,6 +104,10 @@ Referenční souřadnice bodu:
 - Nejlepší timing varianta:
 - Poznámka k poměru sub/top:
 - Co ověřit příště:
+
+Pravidlo interpretace:
+- správný timing do hlavního bodu ještě automaticky neznamená nejlepší summation kicku
+- po delay kroku je potřeba dál testovat i polaritu (`normal` / `invert`) a hodnotit reálné sčítání v pásmu crossoveru
 
 ## 8) Ilustrace postavení
 
