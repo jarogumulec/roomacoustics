@@ -56,6 +56,33 @@ Poznámka k publikovaným frekvenčním údajům:
 - v dostupných podkladech se objevují dvě různé formulace: `49-22 000 Hz (±3 dB)` a širší katalogové `42 Hz-50 kHz`
 - pro tuto dokumentaci je důležitější reálné in-room měření než samotný katalogový rozsah
 
+Rozšířený technický profil z externích review:
+- AudioExcite parts 1-4 a navazující ASR thread se shodují, že samotné drivery jsou na třídu velmi slušné, ale slabší místo je původní výhybka a integrace obou měničů
+- kabinet podle AudioExcite: `15 mm MDF`, `22 mm` čelní stěna, jedna vnitřní svislá výztuha, přední `Flowport`, lehké tlumení, čistý objem cca `15.3 l`
+- tweeter `HF00655`: `25 mm` aluminium dome s rear chamber ve stylu `Nautilus`, nízké zkreslení, break-up až kolem `31 kHz`
+- midwoofer `LF011589`: `6.5"` kevlar s reálným phase plugem, dobrá linearita a nízké liché zkreslení, jen lehká anomálie kolem `0.8-1 kHz`
+- z průměrovaných T/S dat v AudioExcite: tweeter přibližně `Re 3.0 ohm`, `fs 790 Hz`, `Qts 0.65`; woofer přibližně `Re 3.9 ohm`, `fs 50.1 Hz`, `Qts 0.37`, `Vas 17.8 l`, `92.6 dB / 2.83 V / 1 m`
+- systémové měření v review: port tuning cca `48 Hz`, impedance minima cca `4.79 ohm @ 197 Hz` a `3.59 ohm @ 20 kHz`, tedy prakticky spíš lehčí `4ohm` zátěž než skutečných `8 ohm`
+- hlavní systémový problém podle review: kolem `4 kHz` je cca `+5 dB` zdvih v oblasti crossoveru, tweeter je zvýrazněný nad `10 kHz` a směrovost / phase tracking nejsou ideálně sladěné
+
+Praktická interpretace pro tento projekt:
+- externí review a domácí REW data si přímo neodporují, protože řeší jinou věc
+- review se dívají hlavně na samotnou bednu a její crossover / directivity chování
+- zdejší měření popisují hlavně interakci bedny s místností, zejména v pásmu `40-80 Hz`
+- pracovní závěr je tedy dvojí: doma je největší problém room response v basech, ale bedna samotná může zároveň přispívat lehce jasnějším nebo méně soudržným horním pásmem
+
+Vhodnost navrhovaných modifikací výhybky pro tento setup:
+- jednoduchý `Mod 0` z AudioExcite, tedy lehké utlumení tweeteru odporem, může být smysluplný jako levný a reverzibilní test, pokud by subjektivně vadila přehnaná energie výšek
+- hlubší přestavby výhybky `Mod 1 / 1.5 / 2` mohou zlepšit tonální rovnost a soudržnost, ale nevyřeší současný hlavní problém tohoto setupu: room modes, decay a L/R asymetrii
+- proto je pro tento projekt rozumnější pořadí: nejdřív geometrie a postavení, teprve potom případný crossover mod
+
+Zdroje k externím review:
+- AudioExcite part 1: <https://www.audioexcite.com/?page_id=6070>
+- AudioExcite part 2: <https://www.audioexcite.com/?page_id=6086>
+- AudioExcite part 3: <https://www.audioexcite.com/?page_id=6164>
+- AudioExcite part 4: <https://www.audioexcite.com/?page_id=6225>
+- ASR thread: <https://www.audiosciencereview.com/forum/index.php?threads/an-attemp-to-make-subjective-and-objective-analysis-of-bowers-wilkins-685-s1-bookshelf-speakers.44272/>
+
 ## 4) Měřicí pozice
 
 Společné:
