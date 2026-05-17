@@ -37,6 +37,50 @@ Praktický dopad:
 - velmi malá vzdálenost zadní stěny repro od zadní stěny místnosti i malá mezera pravého repro od boční stěny zvyšují pravděpodobnost silné boundary gain podpory a L/R asymetrie
 - pravý a levý kanál tak pracují v jiné vazbě na stěny, takže je očekávatelná L/R asymetrie v odezvě i v decay
 
+Varianty layoutu pro tento projekt:
+- `Home-A` = původní změřená geometrie ze série `2026-05-16`; právě tato varianta odpovídá všem dosavadním publikovaným měřením
+- `Home-B` = nová budoucí geometrie po prvních mechanických změnách; zatím ještě bez nové měřicí série
+- každé další měření je vhodné svázat nejen s bodem, ale i s layoutem, například `HA_uTV`, `HA_gauc`, `HB_M1`, `HB_M4`
+
+Pracovní souřadnicový systém pro další Home měření:
+- počátek `0,0,0` = levý přední roh místnosti při pohledu od repro do místnosti, na podlaze
+- osa `x` = od přední stěny se repro do hloubky místnosti
+- osa `y` = od levé stěny doprava
+- osa `z` = výška nad podlahou
+
+Pevné reference v tomto systému:
+- střed levého repro: přibližně `x=0.231 m`, `y=4.600 m`, `z=1.000 m`
+- střed pravého repro: přibližně `x=0.231 m`, `y=6.801 m`, `z=1.000 m`
+- okno na pravé stěně: `y=7.000 m`, rozsah přibližně `x=1.20 až 3.30 m`
+- střed TV na přední stěně: `x=0.000 m`, `y=5.450 m`; při šířce `1.04 m` vychází TV přibližně v rozsahu `y=4.93 až 5.97 m`
+- sedačka: šířka `2.60 m`, hloubka `0.90 m`, přiražená ke stěně proti repro a současně `1.00 m` od pravé stěny s oknem; půdorysově tedy zhruba `x=4.00 až 4.90 m`, `y=3.40 až 6.00 m`
+- geometrický střed sedačky: přibližně `x=4.45 m`, `y=4.70 m`
+
+Praktická naming konvence:
+- měřicí body zapisovat jako `nazev_x.._y.._z..`, například `gauc_stred_x4.45_y4.70_z1.00`
+- pokud je bod vázaný na objekt, držet i referenci objektu, například `tv_stred`, `gauc_stred`, `osa_repro`
+
+Home-B: nová budoucí geometrie po první mechanické změně:
+- levý repro zatím beze změny: přibližně `x=0.231 m`, `y=4.600 m`, `z=1.000 m`
+- pravý repro po odsazení od pravé stěny: přibližně `x=0.231 m`, `y=6.551 m`, `z=1.000 m`
+- pravá bočnice pravého repro je nově přibližně `0.35 m` od pravé stěny
+- rozteč střed-střed tím vychází přibližně `1.95 m`
+- střed TV je pro budoucí měření nově přibližně `x=0.000 m`, `y=5.600 m`
+
+Navržené budoucí měřicí body pro `Home-B`:
+- `HB_M1`: sedačka vlevo, orientačně `x=4.45 m`, `y=5.20 m`, `z=1.00 m`
+- `HB_M2`: sedačka vpravo, orientačně `x=4.45 m`, `y=5.80 m`, `z=1.00 m`
+- `HB_M3`: před sedačkou v ose, orientačně `x=3.86 m`, `y=5.60 m`, `z=1.00 m`
+- `HB_M4`: levá střední zóna místnosti, orientačně `x=2.45 m`, `y=2.50 m`, `z=1.00 m`
+- `HB_M5`: pravá střední zóna místnosti, orientačně `x=2.45 m`, `y=6.50 m`, `z=1.00 m`
+- `HB_M6`: levý zadní LF kontrolní bod, orientačně `x=4.36 m`, `y=0.86 m`, `z=1.00 m`
+- `HB_M7`: pravý zadní LF kontrolní bod, orientačně `x=4.36 m`, `y=6.14 m`, `z=1.00 m`
+
+Praktický význam těchto bodů:
+- `M1-M3` jsou vhodné pro poslechovou zónu a lokální stabilitu stereo / tonal balance
+- `M4-M5` lépe ukážou laterální asymetrii a změny room response ve střední části místnosti
+- `M6-M7` slouží hlavně jako rychlá kontrola LF modálního pole a decay pod Schröderovou oblastí
+
 ## 3) Technické specs modelu
 
 - výrobce: Bowers & Wilkins
@@ -89,9 +133,10 @@ Společné:
 - výška mikrofonu ve všech pozicích: 1.00 m
 
 Pozice:
-- `u TV`: bližší pozice u televize, kde se hrají hry s gamepadem; cca 1.80 m od stěny, na které jsou repro; přibližně v ose repro
-- `gauč`: cca 4.0 m od repro, v ose repro
-- `střed obýváku`: geometrický střed místnosti
+- `HA_uTV`: bližší pozice u televize, kde se hrají hry s gamepadem; cca 1.80 m od stěny, na které jsou repro; přibližně v ose repro layoutu `Home-A`
+- `HA_gauc`: hlavní reálná poslechová pozice ve staré sérii `Home-A`
+- `HA_stred_obyvaku`: geometrický střed místnosti v původní sérii
+- `HB_M1` až `HB_M7`: zatím jen definované body pro budoucí měření layoutu `Home-B`
 
 ## 5) Zvukový řetězec a režim měření
 
@@ -142,6 +187,10 @@ Z exportů jsou aktuálně k dispozici:
 - `gauč`: `L`, `R`, `L+R`
 - `střed obýváku`: `L+R`
 
+Tyto exporty patří do layoutu `Home-A`.
+
+Pro layout `Home-B` zatím ještě není nová kompletní série změřená.
+
 Exportované datové sady:
 - `SPL Phase phase/`
 - `impulse responses/`
@@ -155,4 +204,10 @@ Poznámka:
 
 ## 8) Ilustrace postavení
 
-![Půdorys Home](illustrace_pudorys_home.svg)
+Historický změřený layout `Home-A`:
+
+![Půdorys Home-A](illustrace_pudorys_home.svg)
+
+Budoucí měřicí layout `Home-B`:
+
+![Půdorys Home-B](illustrace_pudorys_home_layout_b.svg)

@@ -5,7 +5,6 @@
     </marker>
     <style>
       .room { fill:#f8fafc; stroke:#334155; stroke-width:3; }
-      .wall-note { fill:#e2e8f0; stroke:#94a3b8; }
       .speaker { fill:#2563eb; stroke:#1e3a8a; stroke-width:2; }
       .center { fill:#f8fafc; stroke:#1e3a8a; stroke-width:1.8; }
       .coord-axis { stroke:#0f766e; stroke-width:2.2; marker-end:url(#arrow); }
@@ -22,6 +21,7 @@
       .door { stroke:#ef4444; stroke-width:6; }
       .sofa { fill:#f59e0b; opacity:0.16; stroke:#b45309; stroke-width:2.5; }
       .origin { fill:#0f766e; }
+      .measure { fill:#16a34a; stroke:#166534; stroke-width:1.6; }
       .txt { font: 18px 'Segoe UI', sans-serif; fill:#0f172a; }
       .small { font: 14px 'Segoe UI', sans-serif; fill:#334155; }
       .title { font: 26px 'Segoe UI Semibold', sans-serif; fill:#0f172a; }
@@ -29,13 +29,11 @@
     </style>
   </defs>
 
-  <text x="48" y="42" class="title">Home · technický půdorys</text>
-  <text x="48" y="68" class="small">Rozměry místnosti 7.0 m × 4.9 m, B&amp;W 685, půdorys repro kreslen skutečným footprintem 198 × 331 mm.</text>
+  <text x="48" y="42" class="title">Home · technický půdorys · Layout B</text>
+  <text x="48" y="68" class="small">Budoucí měřicí geometrie po posunu pravého repro a TV. Původní měření zůstávají v Layout A.</text>
 
-  <!-- scale 1 m = 140 px ; width 7.0m => 980 px, depth 4.9m => 686 px -->
   <rect x="180" y="110" width="980" height="686" class="room"/>
 
-  <!-- coordinate system and fixed references -->
   <circle cx="180" cy="110" r="5" class="origin"/>
   <text x="192" y="104" class="small">0,0</text>
   <line x1="180" y1="110" x2="180" y2="230" class="coord-axis"/>
@@ -43,34 +41,28 @@
   <text x="188" y="244" class="small">x do hloubky</text>
   <text x="308" y="104" class="small">y doprava</text>
 
-  <!-- small XY legend for measurement-point notation -->
   <circle cx="1280" cy="88" r="4" class="origin"/>
   <line x1="1280" y1="88" x2="1280" y2="122" class="coord-axis"/>
   <line x1="1280" y1="88" x2="1314" y2="88" class="coord-axis"/>
   <text x="1288" y="120" class="small">x+</text>
   <text x="1318" y="84" class="small">y+</text>
-  <text x="1210" y="84" class="small">souřadnicová orientace</text>
 
-  <!-- TV center 1.55 m from front-right corner, width 1.04 m -->
-  <rect x="870.2" y="110" width="145.6" height="14" class="tv"/>
-  <line x1="942.9999999999999" y1="110" x2="942.9999999999999" y2="150" class="guide"/>
-  <text x="886" y="98" class="small">TV 1.04 m</text>
-  <text x="908" y="166" class="small">střed TV y=5.45 m</text>
+  <rect x="891.2" y="110" width="145.6" height="14" class="tv"/>
+  <line x1="964" y1="110" x2="964" y2="150" class="guide"/>
+  <text x="904" y="98" class="small">TV 1.04 m</text>
+  <text x="924" y="166" class="small">střed TV y=5.60 m</text>
 
-  <!-- right-wall window x=1.20..3.30 m -->
   <rect x="1164" y="278" width="12" height="294" class="window"/>
   <line x1="1140" y1="278" x2="1160" y2="278" class="guide"/>
   <line x1="1140" y1="572" x2="1160" y2="572" class="guide"/>
   <text x="1184" y="324" class="small">okno</text>
   <text x="1184" y="344" class="small">x=1.20 až 3.30 m</text>
 
-  <!-- L bookshelf near front-left corner: 180 cm + 130 cm, depth 30 cm -->
   <rect x="180" y="110" width="252" height="42" class="bookshelf"/>
   <rect x="180" y="110" width="42" height="182" class="bookshelf"/>
   <text x="238" y="206" class="small">knihovna L</text>
   <text x="238" y="226" class="small">x=1.30 m, y=1.80 m, hl. 0.30 m</text>
 
-  <!-- opposite wall: desk and door segment -->
   <rect x="180" y="600" width="84" height="196" class="desk"/>
   <text x="274" y="678" class="small">pracovní stůl</text>
   <text x="274" y="698" class="small">x=1.40 m, hl. 0.60 m</text>
@@ -81,18 +73,15 @@
   <text x="222" y="430" class="small">dveře</text>
   <text x="222" y="450" class="small">x=1.80 až 3.20 m</text>
 
-  <!-- second door on front wall next to speakers: 2.60..4.00 m from front-right corner -->
   <line x1="600" y1="114" x2="796" y2="114" class="door"/>
   <text x="500" y="96" class="small">dveře vedle repro</text>
   <text x="500" y="76" class="small">2.60 až 4.00 m od pravého rohu</text>
 
-  <!-- sofa footprint: x=4.00..4.90 m, y=3.40..6.00 m -->
   <rect x="656" y="670" width="364" height="126" class="sofa"/>
   <text x="1032" y="708" class="txt">sedačka</text>
   <text x="1032" y="730" class="small">260 × 90 cm</text>
   <text x="1032" y="752" class="small">x=4.00 až 4.90 m</text>
   <text x="1032" y="774" class="small">y=3.40 až 6.00 m</text>
-  <text x="1032" y="796" class="small">střed x=4.45 m, y=4.70 m</text>
 
   <line x1="180" y1="834" x2="1160" y2="834" class="dim"/>
   <text x="640" y="824" class="txt">7.0 m</text>
@@ -101,74 +90,80 @@
   <text x="106" y="470" class="txt" transform="rotate(-90 106,470)">4.9 m</text>
 
   <text x="768" y="102" class="small">L repro</text>
-  <text x="1086" y="102" class="small">R repro</text>
+  <text x="1052" y="102" class="small">R repro</text>
 
   <line x1="824.14" y1="165.44" x2="824.14" y2="796" class="axis"/>
-  <line x1="1132.14" y1="165.44" x2="1132.14" y2="796" class="axis"/>
+  <line x1="1097.14" y1="165.44" x2="1097.14" y2="796" class="axis"/>
 
   <line x1="1154" y1="110" x2="1154" y2="119.1" class="dim"/>
   <text x="1170" y="122" class="small">6.5 cm za oběma skříněmi</text>
 
-  <line x1="1146" y1="186" x2="1160" y2="186" class="dim"/>
-  <text x="1180" y="190" class="small">10 cm pravá bočnice → pravá stěna</text>
+  <line x1="1111" y1="186" x2="1160" y2="186" class="dim"/>
+  <text x="1180" y="190" class="small">35 cm pravá bočnice → pravá stěna</text>
 
-  <line x1="1132.14" y1="142.27" x2="670" y2="142.27" class="guide"/>
+  <line x1="1097.14" y1="142.27" x2="670" y2="142.27" class="guide"/>
 
-  <!-- spacing -->
-  <line x1="824.14" y1="214" x2="1132.14" y2="214" class="dim"/>
-  <text x="915" y="206" class="txt">2.20 m střed-střed</text>
+  <line x1="824.14" y1="214" x2="1097.14" y2="214" class="dim"/>
+  <text x="910" y="206" class="txt">1.95 m střed-střed</text>
 
-  <!-- listener positions -->
-  <circle cx="978.14" cy="362" r="8" class="pos"/>
-  <text x="994" y="356" class="txt">u TV</text>
-  <text x="994" y="378" class="small">cca 1.80 m od přední stěny</text>
+  <circle cx="964" cy="362" r="8" class="pos"/>
+  <text x="980" y="356" class="txt">u TV</text>
+  <text x="980" y="378" class="small">nová osa, cca 1.80 m od přední stěny</text>
 
-  <circle cx="978.14" cy="733" r="8" class="pos"/>
-  <text x="994" y="727" class="txt">poslech sedačka</text>
-  <text x="994" y="749" class="small">v ose repro</text>
+  <circle cx="964" cy="733" r="8" class="pos"/>
+  <text x="980" y="727" class="txt">poslech sedačka</text>
+  <text x="980" y="749" class="small">Layout B, v ose repro</text>
 
   <circle cx="670" cy="453" r="8" class="pos"/>
   <text x="686" y="447" class="txt">střed obýváku</text>
   <text x="686" y="469" class="small">orientační L+R reference</text>
 
-  <!-- listening axis -->
-  <line x1="978.14" y1="142.27" x2="978.14" y2="720" class="axis"/>
-  <text x="994" y="136" class="small">hlavní osa poslechu</text>
+  <circle cx="908" cy="733" r="6" class="measure"/>
+  <text x="862" y="764" class="small">M1 sedačka vlevo</text>
+  <circle cx="1020" cy="733" r="6" class="measure"/>
+  <text x="996" y="764" class="small">M2 sedačka vpravo</text>
+  <circle cx="964" cy="650" r="6" class="measure"/>
+  <text x="980" y="654" class="small">M3 před sedačkou</text>
+  <circle cx="530" cy="453" r="6" class="measure"/>
+  <text x="430" y="447" class="small">M4 levá střední zóna</text>
+  <circle cx="1090" cy="453" r="6" class="measure"/>
+  <text x="1104" y="447" class="small">M5 pravá střední zóna</text>
+  <circle cx="300" cy="720" r="6" class="measure"/>
+  <text x="314" y="724" class="small">M6 levý zadní roh</text>
+  <circle cx="1040" cy="720" r="6" class="measure"/>
+  <text x="1054" y="724" class="small">M7 pravý zadní roh</text>
+
+  <line x1="964" y1="142.27" x2="964" y2="720" class="axis"/>
+  <text x="980" y="136" class="small">hlavní osa poslechu</text>
 
   <text x="558" y="100" class="small">stěna za repro / TV stěna</text>
 
-  <!-- speakers near top wall: exact footprint 198 x 331 mm, drawn above wall label so they stay visible -->
   <rect x="810.28" y="119.1" width="27.72" height="46.34" class="speaker"/>
-  <rect x="1118.28" y="119.1" width="27.72" height="46.34" class="speaker"/>
+  <rect x="1083.28" y="119.1" width="27.72" height="46.34" class="speaker"/>
   <circle cx="824.14" cy="142.27" r="4.2" class="center"/>
-  <circle cx="1132.14" cy="142.27" r="4.2" class="center"/>
+  <circle cx="1097.14" cy="142.27" r="4.2" class="center"/>
 
-  <!-- enlarged detail for real gap and depth -->
   <rect x="1190" y="372" width="230" height="220" class="detail"/>
   <text x="1210" y="402" class="txt">Detail u stěny</text>
   <rect x="1218" y="426" width="172" height="18" class="detail-wall"/>
   <text x="1224" y="420" class="small">TV stěna</text>
-  <rect x="1292" y="476" width="54" height="90" class="detail-speaker"/>
-  <line x1="1319" y1="444" x2="1319" y2="476" class="dim"/>
-  <text x="1332" y="464" class="small">6.5 cm</text>
-  <line x1="1362" y1="476" x2="1412" y2="476" class="dim"/>
-  <text x="1368" y="468" class="small">10 cm</text>
-  <line x1="1270" y1="476" x2="1270" y2="566" class="dim"/>
-  <text x="1240" y="526" class="small" transform="rotate(-90 1240,526)">33.1 cm hloubka</text>
-  <line x1="1292" y1="584" x2="1346" y2="584" class="dim"/>
-  <text x="1298" y="604" class="small">19.8 cm šířka</text>
-  <text x="1210" y="548" class="small">Měřítko detailu je zvětšené jen pro čitelnost.</text>
-  <text x="1210" y="570" class="small">Hlavní půdorys nahoře zůstává v poměru místnosti.</text>
+  <rect x="1276" y="476" width="54" height="90" class="detail-speaker"/>
+  <line x1="1303" y1="444" x2="1303" y2="476" class="dim"/>
+  <text x="1316" y="464" class="small">6.5 cm</text>
+  <line x1="1346" y1="476" x2="1412" y2="476" class="dim"/>
+  <text x="1358" y="468" class="small">35 cm</text>
+  <line x1="1254" y1="476" x2="1254" y2="566" class="dim"/>
+  <text x="1224" y="526" class="small" transform="rotate(-90 1224,526)">33.1 cm hloubka</text>
+  <line x1="1276" y1="584" x2="1330" y2="584" class="dim"/>
+  <text x="1282" y="604" class="small">19.8 cm šířka</text>
+  <text x="1210" y="548" class="small">Layout B je budoucí reference pro další měření.</text>
+  <text x="1210" y="570" class="small">Layout A zůstává historická reference původní série.</text>
 
-  <text x="1190" y="640" class="txt">B&amp;W 685</text>
-  <text x="1190" y="670" class="small">- 2-way bass reflex, 165 mm + 25 mm</text>
-  <text x="1190" y="696" class="small">- footprint v plánku: 198 × 331 mm</text>
-  <text x="1190" y="722" class="small">- střed skříně je cca 23.1 cm od zadní stěny</text>
-  <text x="1190" y="748" class="small">- střed pravé skříně je cca 19.9 cm od pravé stěny</text>
-  <text x="1190" y="774" class="small">- repro jsou výrazně excentrické vůči místnosti</text>
-  <text x="1190" y="800" class="small">- u TV = bližší herní / kontrolní bod</text>
-  <text x="1190" y="826" class="small">- hlavní poslech na sedačce je v ose reproduktorů</text>
-  <text x="1190" y="852" class="small">- pravá stěna obsahuje okno v x=1.20 až 3.30 m</text>
-  <text x="1190" y="878" class="small">- TV střed je y=5.45 m od levé stěny</text>
-  <text x="1190" y="904" class="small">- tento plán odpovídá původní změřené geometrii Home-A</text>
+  <text x="1190" y="640" class="txt">Layout B poznámky</text>
+  <text x="1190" y="670" class="small">- pravý repro: střed cca 45 cm od pravé stěny</text>
+  <text x="1190" y="696" class="small">- pravá bočnice skříně: cca 35 cm od pravé stěny</text>
+  <text x="1190" y="722" class="small">- TV střed nově cca y=5.60 m od levé stěny</text>
+  <text x="1190" y="748" class="small">- zelené body M1 až M7 patří jen k Layout B</text>
+  <text x="1190" y="774" class="small">- M1 až M3 = poslechová zóna, M4 až M5 = střední pole</text>
+  <text x="1190" y="800" class="small">- M6 až M7 = rychlá LF kontrola rohů / modů</text>
 </svg>
